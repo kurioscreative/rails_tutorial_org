@@ -6,12 +6,12 @@ module ApplicationHelper
     if @title.nil?
       base_title
     else
-        "#{base_title} | #{@title}"
+      "#{base_title} | #{@title}"
     end
   end
 
 
   def logo
-    link_to image_tag("logo.png", :alt => "Sample App", :class => "round"), root_path
+    image_tag("logo.png", :alt => "Sample App", :class => "round")
   end
 end
