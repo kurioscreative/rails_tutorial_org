@@ -26,6 +26,13 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password #Encrypt Password
   
+  has_many :microposts, :dependent => :destroy
+  
+  def feed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Micropost.where("user_id = ?", id)
+  end
+  
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
   end
