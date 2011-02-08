@@ -1,15 +1,11 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
-
+#Presentation Gems
 gem 'gravatar_image_tag', '1.0.0.pre2' #https://github.com/mdeering/gravatar_image_tag
-
+gem 'will_paginate', '3.0.pre2' #Pagination
 # Deploy with Capistrano
 # gem 'capistrano'
 
@@ -32,6 +28,7 @@ gem 'gravatar_image_tag', '1.0.0.pre2' #https://github.com/mdeering/gravatar_ima
 group :development do
   gem 'rspec-rails', '2.3.0'
   gem 'annotate-models', '1.0.4'
+  gem 'faker', '0.3.1'
 end
 
 group :test do
